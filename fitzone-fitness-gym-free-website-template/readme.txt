@@ -1,23 +1,12 @@
 Preview URL: 
-https://demo.templatesjungle.com/fitzone/
-
-Get the Full Version here: 
-https://templatesjungle.gumroad.com/l/fitzone-fitness-gym-html-website-template
+https://conceptualcode.rf.gd/en/demo/gym_demo/
+https://conceptualcode-official.github.io/template_demo/fitzone-fitness-gym-free-website-template/
 
 It is a free HTML CSS template by https://templatesjungle.com/
 
 You can use this template as a starter template and start building as you require.
 
 The code is consistent and can be easily maintained as we have followed a good coding standard. We want everyone to easily understand it and modify it according to their requirement. As the main goal of providing these templates is to give you something to work on before even starting.
-
-DOCUMENTATION:
-https://docs.templatesjungle.com/
-
-FREE FOR BOTH PERSONAL AND COMMERCIAL USE
-
-This HTML Template is provided by TemplatesJungle.com and is free to use in both personal and commercial projects as long as you don't remove our credit link in the footer.
-
-However, you can remove the credit link by paying for No Attribution version of the template.
 
 
 RIGHTS
@@ -70,4 +59,5 @@ Chocolat.js – a Free Lightbox Plugin -http://chocolat.insipi.de/
 Magnific Lightbox - https://github.com/dimsemenov/Magnific-Popup
 
 Thanks for downloading from TemplatesJungle.com !
+
 
