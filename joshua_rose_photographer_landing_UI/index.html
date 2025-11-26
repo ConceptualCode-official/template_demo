@@ -1,0 +1,56 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joshua Rose - Portfolio</title>
+    <link rel="icon" type="image/png" href="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/13340abb-807c-45d5-82b9-26aba7c61e00/publicContain">
+    <style>
+        /*
+        1. Container for the responsive scaling
+        */
+        .iframe-container {
+            /* Set the aspect ratio using padding-top.
+               Examples:
+               - 56.25% for 16:9 (9 / 16 = 0.5625)
+               - 75% for 4:3 (3 / 4 = 0.75)
+               - 66.66% for 3:2 (2 / 3 = 0.6666)
+            */
+            position: relative;
+            width: 100%;
+            padding-top: 100dvh; /* This is the key: sets a 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 20px; /* Just for spacing */
+            border: 2px solid #ccc; /* Visual aid for the container */
+        }
+
+        /*
+        2. The Iframe itself
+        */
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none; /* Remove default iframe border */
+        }
+
+        /* Basic styling for the rest of the page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0px;
+            padding:0;
+        }
+    </style>
+</head>
+<body>
+    <div class="iframe-container">
+        <iframe 
+            src="https://app.landingsite.ai/website-preview?id=b93db57c-44ef-4c7b-86f9-6a671acb8192" 
+            allowfullscreen>
+        </iframe>
+    </div>
+</body>
+</html>
