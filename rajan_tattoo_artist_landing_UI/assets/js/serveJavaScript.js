@@ -154,12 +154,14 @@ function initInstagramVideoModal() {
   });
   if (closeBtn) {
     closeBtn.addEventListener("click", () => {
+      if(instagramLink) instagramLink.src = '';
       modal.classList.add("hidden");
       modal.classList.remove("flex");
     });
   }
   modal.addEventListener("click", (e) => {
     if (e.target === modal) {
+      if(instagramLink) instagramLink.src = '';
       modal.classList.add("hidden");
       modal.classList.remove("flex");
     }
@@ -214,3 +216,4 @@ export function teardown() {
     link.removeEventListener("click", handleSmoothScroll)
   );
 }
+
