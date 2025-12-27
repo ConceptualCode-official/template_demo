@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    cursor: none;
+    background-color: #050505;
+    color: #ffffff;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply antialiased overflow-x-hidden;
+    font-family: 'Manrope', sans-serif;
+  }
+
+  /* Premium Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #050505;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .clip-text-image {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  /* Metallic Text Effect */
+  .text-metallic {
+    background: linear-gradient(
+      to bottom,
+      #ffffff 0%,
+      #e0e0e0 20%,
+      #a0a0a0 50%,
+      #d0d0d0 80%,
+      #ffffff 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0px 2px 4px rgba(0,0,0,0.3);
+  }
+
+  /* Cinematic Noise Overlay - Optimized */
+  .bg-noise {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 50;
+    opacity: 0.03; /* Reduced opacity for better performance perception */
+    /* Using a simpler filter or image is better for mobile, but keeping SVG for now with reduced opacity */
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+
+  /* Animated Gradient Mesh Background */
+  .gradient-mesh {
+    background: radial-gradient(circle at 50% 50%, rgba(20, 20, 30, 1) 0%, rgba(5, 5, 5, 1) 100%);
+  }
+  
+  .orb {
+    position: absolute;
+    border-radius: 50%;
+    /* Reduced blur for mobile performance */
+    filter: blur(60px); 
+    opacity: 0.4;
+    animation: float 20s infinite ease-in-out;
+    will-change: transform; /* Hint to browser for GPU optimization */
+  }
+  
+  .orb-1 {
+    width: 600px;
+    height: 600px;
+    background: #1a1a2e;
+    top: -10%;
+    left: -10%;
+    animation-delay: 0s;
+  }
+  
+  .orb-2 {
+    width: 500px;
+    height: 500px;
+    background: #2d1b2e;
+    bottom: -10%;
+    right: -10%;
+    animation-delay: -5s;
+  }
+
+  .orb-3 {
+    width: 300px;
+    height: 300px;
+    background: #16213e;
+    top: 40%;
+    left: 40%;
+    animation-delay: -10s;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(30px, -50px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.9); }
+  }
+  
+  /* Text Glow Animation Class */
+  .glow-text {
+    transition: all 0.7s ease;
+    opacity: 0.3;
+    filter: blur(2px);
+  }
+  
+  .glow-text.active {
+    opacity: 1;
+    filter: blur(0px);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+}
+
+/* Hide cursor on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  html {
+    cursor: auto;
+  }
+  .custom-cursor {
+    display: none;
+  }
+  
+  /* Further reduce blur on mobile */
+  .orb {
+    filter: blur(40px);
+  }
+}
