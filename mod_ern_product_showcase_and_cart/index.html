@@ -39,11 +39,39 @@
         }
       }
     </script>
-    <script type="module" crossorigin src="/assets/index-KoRlPm1O.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-icfklqJM.css">
+    <script type="module" crossorigin src="https://conceptualcode-official.github.io/template_demo/mod_ern_product_showcase_and_cart/assets/index-KoRlPm1O.js"></script>
+    <link rel="stylesheet" crossorigin href="https://conceptualcode-official.github.io/template_demo/mod_ern_product_showcase_and_cart/assets/index-icfklqJM.css">
   </head>
   <body>
     <div id="root"></div>
-
+<script>document.addEventListener('DOMContentLoaded',()=>{
+if (window.location.href.includes('mod_ern_product_showcase_and_cart')) {
+    const handleClickIfFound = function() {
+        const homeLink = document.querySelector('[href="/"]');
+        if (homeLink) {
+            homeLink.click();
+            observer.disconnect();
+            return true;
+        }
+        return false;
+    };
+    const observer = new MutationObserver(function(mutationsList, observer) {
+        for(const mutation of mutationsList) {
+            if (mutation.type === 'childList') {
+                if (handleClickIfFound()) {
+                    break;
+                }
+            }
+        }
+    });
+    observer.observe(document.body, { 
+        childList: true, // नए child nodes के जुड़ने या हटने को देखें
+        subtree: true    // body के अंदर की सभी गहरी nesting को भी देखें
+    });
+    handleClickIfFound();
+} else {
+    console.log("URL में 'dist1' नहीं है, इसलिए Observer शुरू नहीं किया गया।");
+}})</script>
   </body>
 </html>
+
