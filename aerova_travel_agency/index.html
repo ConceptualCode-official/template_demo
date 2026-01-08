@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React + TS</title>
 
-    <meta name="description" content="Dualite Alpha Generated Project" />
-    <meta name="author" content="Dulaite Alpha" />
+    <meta name="description" content="cocneptualcode created this Project" />
+    <meta name="author" content="conceptualcode" />
 
     <meta property="og:title" content="vite + react + ts" />
-    <meta property="og:description" content="Dualite Alpha Generated Project" />
+    <meta property="og:description" content="conceptualcode created this project" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://alpha.dualite.dev" />
+    <meta property="og:url" content="https://example.dev" />
     <meta property="og:image" content="https://ibb.co/67X3xfSV" />
     <meta property="og:image:width" content="960" />
     <meta property="og:image:height" content="600" />
@@ -19,7 +19,7 @@
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="vite + react + ts" />
-    <meta name="twitter:description" content="Dualite Alpha Generated Project" />
+    <meta name="twitter:description" content="conceptualcode created this project" />
     <meta name="twitter:site" content="@dualitedev" />
     <meta name="twitter:image" content="https://ibb.co/67X3xfSV" />
 
@@ -31,18 +31,46 @@
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "AlphaProject",
-        "url": "https://alpha.dualite.dev",
-        "description": "Dualite Alpha Generated Project",
+        "url": "https://example.dev",
+        "description": "conceptualcode created this Project",
         "publisher": {
           "@type": "Organization",
-          "name": "Dualite Alpha"
+          "name": "conceptualcode"
         }
       }
     </script>
-    <script type="module" crossorigin src="/assets/index-B8_tbj0I.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BMPp3bTy.css">
+    <script type="module" crossorigin src="https://conceptualcode-official.github.io/template_demo/aerova_travel_agency/assets/index-B8_tbj0I.js"></script>
+    <link rel="stylesheet" crossorigin href="https://conceptualcode-official.github.io/template_demo/aerova_travel_agency/assets/index-BMPp3bTy.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"></div>
+
   </body>
+<script>document.addEventListener('DOMContentLoaded',()=>{
+if (window.location.href.includes('respawn_gaming_cafe')) {
+    const handleClickIfFound = function() {
+        const homeLink = document.querySelector('[href="/"]');
+        if (homeLink) {
+            homeLink.click();
+            observer.disconnect();
+            return true;
+        }
+        return false;
+    };
+    const observer = new MutationObserver(function(mutationsList, observer) {
+        for(const mutation of mutationsList) {
+            if (mutation.type === 'childList') {
+                if (handleClickIfFound()) {
+                    break;
+                }
+            }
+        }
+    });
+    observer.observe(document.body, { 
+        childList: true,
+        subtree: true 
+    });
+    handleClickIfFound();
+} else {
+}})</script>
 </html>
