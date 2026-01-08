@@ -69,11 +69,10 @@ if (window.location.href.includes('respawn_gaming_cafe')) {
         }
     });
     observer.observe(document.body, { 
-        childList: true, // नए child nodes के जुड़ने या हटने को देखें
-        subtree: true    // body के अंदर की सभी गहरी nesting को भी देखें
+        childList: true,
+        subtree: true 
     });
     handleClickIfFound();
 } else {
-    console.log("URL में 'dist1' नहीं है, इसलिए Observer शुरू नहीं किया गया।");
 }})</script>
 </html>
