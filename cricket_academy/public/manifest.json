@@ -1,0 +1,20 @@
+{
+  "name": "Elite Cricket Academy",
+  "short_name": "Elite Cricket",
+  "start_url": "/dashboard",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#003366",
+  "icons": [
+    {
+      "src": "https://i.ibb.co/HLfD5wgf/dualite-favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://i.ibb.co/HLfD5wgf/dualite-favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
