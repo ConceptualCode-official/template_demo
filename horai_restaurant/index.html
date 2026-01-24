@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Horai | Asian Cuisine Mastery</title>
+
+    <meta
+      name="description"
+      content="Horai - Asian Cuisine Mastery with a Twist"
+    />
+    <meta name="author" content="Horai" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Pinyon+Script&family=Montserrat:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta property="og:title" content="Horai" />
+    <meta
+      property="og:description"
+      content="Asian Cuisine Mastery with a Twist"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://d33wubrfki0l68.cloudfront.net/6939b318473f527082d161fb/screenshot_2025-12-10-17-51-49-0000.webp"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Horai",
+        "description": "Asian Cuisine Mastery with a Twist",
+        "url": "https://ier-dualite-proj-2ptn-dualite.netlify.app"
+      }
+    </script>
+    <style>
+      ::-webkit-scrollbar {
+        width: 15px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: #444;
+        border-radius: 8px;
+        border: 4px solid transparent;
+        background-clip: content-box;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: #777;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #222;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script>const scrollPositions = [0,815, 1040, 770, 973.15, 926.4, 347];
+
+function animateScroll(targetY, duration) {
+  const startY = window.pageYOffset || document.documentElement.scrollTop;
+  const distance = targetY - startY;
+  let startTime = null;
+
+  function animation(currentTime) {
+    if (startTime === null) startTime = currentTime;
+    const timeElapsed = currentTime - startTime;
+
+    // Quadratic easing function (In/Out)
+    const ease = (t, b, c, d) => {
+      t /= d / 2;
+      if (t < 1) return c / 2 * t * t + b;
+      t--;
+      return -c / 2 * (t * (t - 2) - 1) + b;
+    };
+
+    const run = ease(timeElapsed, startY, distance, duration);
+    window.scrollTo(0, run);
+
+    if (timeElapsed < duration) requestAnimationFrame(animation);
+  }
+  requestAnimationFrame(animation);
+}
+isTabPressed = true;
+document.addEventListener('keydown', (e) => {
+
+  // Detect Ctrl + Tab + {Number}
+  if (e.ctrlKey && e.key >= '0' && e.key <= '9') {
+    e.preventDefault(); // Prevents browser from switching tabs if possible
+
+    const pressedNumber = parseInt(e.key);
+    const endIndex = pressedNumber - 1;
+
+    // Sum array from [0] to [pressed number + 1]
+    const targetPixel = scrollPositions
+      .slice(0, endIndex + 1)
+      .reduce((acc, val) => acc + val, 0);
+
+    animateScroll(targetPixel, 2000); // 2-second scroll
+  }
+});</script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
